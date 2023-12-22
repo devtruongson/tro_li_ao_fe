@@ -1,2 +1,187 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import 'tippy.js/dist/tippy.css';
+
+* {
+    box-sizing : border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    height  : 100vh;
+    overflow: hidden;
+}
+
+.modal {
+    overflow: hidden !important;
+}
+
+.user-chat {
+    width          : 80%;
+    padding        : 10px 20px;
+    display        : flex;
+    justify-content: flex-end;
+    margin-bottom  : 20px;
+    margin-left    : auto;
+    margin-top     : 20px;
+    border-radius  : 10px;
+}
+
+.user-chat>div {
+    display         : inline-block;
+    padding         : 10px 20px;
+    background-color: rgb(10, 124, 255);
+    border-radius   : 10px;
+    color           : #fff;
+    box-shadow      : 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ai-chat {
+    border-radius: 10px;
+    padding      : 40px 20px;
+    display      : flex;
+    margin-top   : 10px;
+    margin-bottom: 10px;
+    width        : 80%;
+    position     : relative;
+}
+
+.ai-chat>div {
+    display         : inline-block;
+    padding         : 20px 20px;
+    background-color: #f0f105a1;
+    color           : #333;
+    border-radius   : 10px;
+    box-shadow      : 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-send {
+    flex         : 1;
+    border       : 1px solid #ccc;
+    outline      : none;
+    border-radius: 4px;
+    padding      : 6px 10px;
+    font-size    : 12px;
+}
+
+.is-typing {
+    margin-top : 90px;
+    width      : 85px;
+    align-items: center;
+    gap        : 6px;
+    display    : flex;
+}
+
+.jump1,
+.jump2,
+.jump3,
+.jump4,
+.jump5 {
+    width           : 10px;
+    height          : 10px;
+    border-radius   : 100%;
+    background-color: rgb(75, 75, 202);
+}
+
+.jump1 {
+    animation      : typing 1.5s linear infinite;
+    animation-delay: 01.1s;
+}
+
+.jump2 {
+    animation      : typing 1.5s linear infinite;
+    animation-delay: 01.2s;
+}
+
+.jump3 {
+    animation      : typing 1.5s linear infinite;
+    animation-delay: 01.3s;
+}
+
+@keyframes typing {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(0px);
+    }
+
+    35% {
+        transform: translateY(15px);
+    }
+
+    45% {
+        transform: translateY(0px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+
+    75% {
+        background-color: white;
+        transform       : translateY(0px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.setting-wp {
+    position: absolute;
+    z-index : 99999;
+}
+
+.setting-click-toggle {
+    border       : 1px solid #eee;
+    outline      : none;
+    box-shadow   : 0 6px 6px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+.setting-click-toggle:hover {
+    color: rgb(162, 162, 10);
+}
+
+.setting-body {
+    background-color: #fff;
+    padding         : 10px 20px;
+    box-shadow      : 0 6px 6px 0 rgba(0, 0, 0, 0.15);
+    border-radius   : 6px;
+    overflow        : hidden;
+    border          : 1px solid #ddd;
+}
+
+.setting-body li {
+    cursor: pointer;
+}
+
+.setting-body li:hover {
+    color: #ee4d2d;
+}
+
+.mute-btn {
+    display    : flex;
+    float      : right;
+    gap        : 10px;
+    align-items: center;
+}
+
+.mute-btn button {
+    border   : 1px solid #ddd;
+    outline  : none;
+    padding  : 3px 10px;
+    font-size: 13px;
+}
+
+.mute-btn button.active {
+    border-color: #ee4d2d;
+}
+
+.mute-btn button:hover {
+    color: #ee4d2d;
+}
