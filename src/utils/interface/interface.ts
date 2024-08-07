@@ -8,6 +8,7 @@ export interface IResponse<T> {
     data: T;
     is_ai: true;
     is_point: boolean;
+    is_video: boolean;
 }
 
 export interface IMarkDown {
